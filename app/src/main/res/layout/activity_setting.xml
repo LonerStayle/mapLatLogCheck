@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_polyLine"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:hint="좌표들을 적어주세요"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="경로선 변경 및 마커변경 체크확인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_marker" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Create by. Loner\n엔다 안드로이드 개발담당."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/et_marker"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="마커 변경"
+        app:layout_constraintEnd_toEndOf="@+id/et_polyLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_polyLine" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:text="**주의사항**\n(1) 0.000000 소수점 자리 6개까지인 좌표만 넣어주세요 0.0000043 같은 7자리를 넣으면 경로선이 잘 읽지 못합니다.\n\n
+(2)숫자와 . , 특수문자만 읽습니다 \n.,를 제외한 특수문자, 한글,영어를 섞여있으면 실행되지 않습니다.\n\n(3)마커 혹은 경로선 둘다 확인할수도 있고 마커 적는란은 비우고 경로선만 확인할수도 있습니다.\n\n
+(4)마커 적는란 과 경로선 넣는 란에 경로선 리스트를 둘다 적는다면 ,\n 맵 화면에서 경로선 마다 마킹 표시가 되서 수정 할때 더 보기 편하실수도 있을것 같습니다.\n\n
+(5)띄어쓰기, 한칸 띈 상태라도 상관없습니다. 37.0~,127.0~ 이 두개는 항상 셋트로 넣어주세요\n\n(6)마커적는란,경로선 적는란 두개다 안채워도 하나만 확인 하실수 있습니다."
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_markerList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="리셋"
+        app:layout_constraintBottom_toBottomOf="@+id/et_marker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_marker" />
+
+    <Button
+        android:id="@+id/btn_resetPolyLineList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="리셋"
+        app:layout_constraintBottom_toBottomOf="@+id/et_polyLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_polyLine" />
+</androidx.constraintlayout.widget.ConstraintLayout>
