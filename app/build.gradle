@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "kr.loner.maptest"
@@ -32,9 +32,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.13'
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation("com.naver.maps:map-sdk:3.10.1")
+
+    implementation("com.naver.maps:map-sdk:3.11.0")
     implementation 'gun0912.ted:tedpermission:2.2.3'
 
     implementation 'com.google.android.gms:play-services-location:17.1.0'

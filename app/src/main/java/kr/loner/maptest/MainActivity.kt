@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val mapFragment = setMapFragment()
-        setMap(mapFragment!!)
+            setMap(mapFragment!!)
+
 
     }
 
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                 supportFragmentManager.beginTransaction().add(R.id.mapFragment, it).commit()
             }
     }
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setMap(mapFragment: MapFragment) {
@@ -108,18 +110,17 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setPermission() {
         tedPermissionCheck(this, {
-
-            requestPermissions(
-                arrayOf(
-                    Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION
-                ),
-                LOCATION_PERMISSION_REQUEST_CODE
-            )
-
+                requestPermissions(
+                    arrayOf(
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                    ),
+                    LOCATION_PERMISSION_REQUEST_CODE
+                )
         }, {})
     }
 
